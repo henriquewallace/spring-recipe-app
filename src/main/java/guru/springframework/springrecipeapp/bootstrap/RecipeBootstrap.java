@@ -135,16 +135,15 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
                         "Read more: http://www.simplyrecipes.com/recipes/perfect_guacamole/#ixzz4jvoun5ws");
 
         guacamoleRecipe.setNotes(guacamoleNotes);
-        guacamoleNotes.setRecipe(guacamoleRecipe);
 
-        guacamoleRecipe.getIngredients().add(new Ingredient("ripe avocados", new BigDecimal(2), eachUom, guacamoleRecipe));
-        guacamoleRecipe.getIngredients().add(new Ingredient("kosher salt", new BigDecimal(.25), teaSpoonUom, guacamoleRecipe));
-        guacamoleRecipe.getIngredients().add(new Ingredient("fresh lime or lemon juice", new BigDecimal(1), tableSpoonUom, guacamoleRecipe));
-       guacamoleRecipe.getIngredients().add(new Ingredient("minced red onion or thinly sliced green onion", new BigDecimal(2), tableSpoonUom, guacamoleRecipe));
-        guacamoleRecipe.getIngredients().add(new Ingredient("serrano chilis", new BigDecimal(2), eachUom, guacamoleRecipe));
-       guacamoleRecipe.getIngredients().add(new Ingredient("cilantro", new BigDecimal(2), eachUom, guacamoleRecipe));
-        guacamoleRecipe.getIngredients().add(new Ingredient("freshly ground black pepper", new BigDecimal(1), pinchUom, guacamoleRecipe));
-        guacamoleRecipe.getIngredients().add(new Ingredient("ripe tomato", new BigDecimal(.5), eachUom, guacamoleRecipe));
+        guacamoleRecipe.addIngredient(new Ingredient("ripe avocados", new BigDecimal(2), eachUom));
+        guacamoleRecipe.addIngredient(new Ingredient("kosher salt", new BigDecimal(.25), teaSpoonUom));
+        guacamoleRecipe.addIngredient(new Ingredient("fresh lime or lemon juice", new BigDecimal(1), tableSpoonUom));
+       guacamoleRecipe.addIngredient(new Ingredient("minced red onion or thinly sliced green onion", new BigDecimal(2), tableSpoonUom));
+        guacamoleRecipe.addIngredient(new Ingredient("serrano chilis", new BigDecimal(2), eachUom));
+       guacamoleRecipe.addIngredient(new Ingredient("cilantro", new BigDecimal(2), eachUom));
+        guacamoleRecipe.addIngredient(new Ingredient("freshly ground black pepper", new BigDecimal(1), pinchUom));
+        guacamoleRecipe.addIngredient(new Ingredient("ripe tomato", new BigDecimal(.5), eachUom));
 
         guacamoleRecipe.getCategories().add(americanCategory);
         guacamoleRecipe.getCategories().add(mexicanCategory);
