@@ -23,7 +23,7 @@ class RecipeCommandToRecipeTest {
     public static final Long CAT_ID2 = 2L;
     public static final Long INGRED_ID_1 = 3L;
     public static final Long INGRED_ID_2 = 4L;
-    public static final Long NOTES_ID = 9L;
+    public static final Long NOTES_ID = 1L;
     UnitOfMeasureCommand unitOfMeasureCommand = new UnitOfMeasureCommand();
 
     RecipeCommandToRecipe converter;
