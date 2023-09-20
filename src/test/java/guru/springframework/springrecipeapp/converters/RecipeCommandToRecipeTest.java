@@ -3,7 +3,6 @@ package guru.springframework.springrecipeapp.converters;
 import guru.springframework.springrecipeapp.commands.*;
 import guru.springframework.springrecipeapp.domain.Difficulty;
 import guru.springframework.springrecipeapp.domain.Recipe;
-import guru.springframework.springrecipeapp.domain.UnitOfMeasure;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -71,11 +70,11 @@ class RecipeCommandToRecipeTest {
 
         IngredientCommand ingredient = new IngredientCommand();
         ingredient.setId(INGRED_ID_1);
-        ingredient.setUnitOfMeasure(unitOfMeasureCommand);
+        ingredient.setUom(unitOfMeasureCommand);
 
         IngredientCommand ingredient2 = new IngredientCommand();
         ingredient2.setId(INGRED_ID_2);
-        ingredient2.setUnitOfMeasure(unitOfMeasureCommand);
+        ingredient2.setUom(unitOfMeasureCommand);
 
         recipeCommand.getIngredients().add(ingredient);
         recipeCommand.getIngredients().add(ingredient2);
