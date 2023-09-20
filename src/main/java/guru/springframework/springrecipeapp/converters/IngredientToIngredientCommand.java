@@ -2,7 +2,9 @@ package guru.springframework.springrecipeapp.converters;
 
 import guru.springframework.springrecipeapp.commands.IngredientCommand;
 import guru.springframework.springrecipeapp.domain.Ingredient;
+import lombok.Synchronized;
 import org.springframework.core.convert.converter.Converter;
+import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -14,6 +16,8 @@ public class IngredientToIngredientCommand implements Converter<Ingredient, Ingr
         this.uomConverter = uomConverter;
     }
 
+    @Synchronized
+    @Nullable
     @Override
     public IngredientCommand convert(Ingredient source) {
         final IngredientCommand ingredientCommand = new IngredientCommand();

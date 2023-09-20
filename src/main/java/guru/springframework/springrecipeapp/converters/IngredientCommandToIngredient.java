@@ -3,6 +3,7 @@ package guru.springframework.springrecipeapp.converters;
 import guru.springframework.springrecipeapp.commands.IngredientCommand;
 import guru.springframework.springrecipeapp.domain.Ingredient;
 import org.springframework.core.convert.converter.Converter;
+import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -13,7 +14,7 @@ public class IngredientCommandToIngredient implements Converter<IngredientComman
     public IngredientCommandToIngredient(UnitOfMeasureCommandToUnitOfMeasure uomConverter) {
         this.uomConverter = uomConverter;
     }
-
+    @Nullable
     @Override
     public Ingredient convert(IngredientCommand source) {
         final Ingredient ingredient = new Ingredient();
